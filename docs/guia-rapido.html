@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Rápido do SiteGen - SiteGen</title>
+    <meta name="description" content="SiteGen - Gerador de sites estáticos em Go">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    
+<header>
+    <nav class="container">
+        <a href="../index.html" class="logo">SiteGen</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../sobre.html">Sobre</a></li>
+            <li><a href="../blog/">Blog</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="container">
+        <div class="content">
+            <div class="page-header">
+                <h1>Guia Rápido do SiteGen</h1>
+                
+                <div class="date">2024-01-13</div>
+                
+                
+                <div class="tags">
+                    
+                    <span class="tag">guia</span>
+                    
+                    <span class="tag">documentacao</span>
+                    
+                    <span class="tag">inicio</span>
+                    
+                </div>
+                
+            </div>
+            <h1>Guia Rápido do SiteGen</h1>
+<p>Este é um guia rápido para começar a usar o SiteGen em 5 minutos.</p>
+<h2>Instalação</h2>
+<ol>
+<li>
+<p><strong>Clone o repositório:</strong></p>
+<pre><code class="language-bash">git clone https://github.com/sitegen/sitegen.git
+cd sitegen
+</code></pre>
+</li>
+<li>
+<p><strong>Compile o projeto:</strong></p>
+<pre><code class="language-bash">go build -o sitegen main.go
+</code></pre>
+</li>
+</ol>
+<h2>Primeiro Site</h2>
+<ol>
+<li>
+<p><strong>Crie a estrutura:</strong></p>
+<pre><code class="language-bash">mkdir meu-site
+cd meu-site
+mkdir content templates
+</code></pre>
+</li>
+<li>
+<p><strong>Configure o site (<code>site.toml</code>):</strong></p>
+<pre><code class="language-toml">[site]
+title = &quot;Meu Primeiro Site&quot;
+description = &quot;Site criado com SiteGen&quot;
+
+[build]
+source = &quot;./content&quot;
+output = &quot;./dist&quot;
+templates = { default = &quot;./templates/layout.html&quot; }
+
+[plugins]
+pipeline = [&quot;markdown&quot;, &quot;html&quot;]
+</code></pre>
+</li>
+<li>
+<p><strong>Crie um template (<code>templates/layout.html</code>):</strong></p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;{{.Title}}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;{{.Title}}&lt;/h1&gt;
+    {{.Content}}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>Adicione conteúdo (<code>content/index.md</code>):</strong></p>
+<pre><code class="language-markdown">---
+title: &quot;Página Inicial&quot;
+---
+
+# Bem-vindo!
+
+Este é meu primeiro site com SiteGen.
+</code></pre>
+</li>
+<li>
+<p><strong>Gere o site:</strong></p>
+<pre><code class="language-bash">../sitegen build .
+</code></pre>
+</li>
+</ol>
+<h2>Estrutura de Diretórios</h2>
+<pre><code>meu-site/
+├── site.toml              # Configuração
+├── content/               # Conteúdo markdown
+│   ├── index.md          # Página inicial
+│   ├── sobre.md          # Página sobre
+│   └── blog/             # Posts do blog
+│       ├── post1.md
+│       └── post2.md
+├── templates/             # Templates HTML
+│   └── layout.html
+└── dist/                 # Saída gerada
+</code></pre>
+<h2>Recursos Avançados</h2>
+<h3>Metadados YAML</h3>
+<pre><code class="language-yaml">---
+title: &quot;Meu Post&quot;
+date: &quot;2024-01-15&quot;
+category: &quot;blog&quot;
+template: &quot;blog&quot;
+tags: [&quot;tag1&quot;, &quot;tag2&quot;]
+draft: false
+---
+</code></pre>
+<h3>Múltiplos Templates</h3>
+<pre><code class="language-toml">[build]
+templates = { 
+    default = &quot;./templates/layout.html&quot;, 
+    blog = &quot;./templates/blog.html&quot;, 
+    page = &quot;./templates/page.html&quot; 
+}
+</code></pre>
+<h3>Recursividade</h3>
+<p>O SiteGen agora suporta subdiretórios automaticamente:</p>
+<ul>
+<li><code>content/blog/post.md</code> → <code>dist/blog/post.html</code></li>
+<li><code>content/docs/guia.md</code> → <code>dist/docs/guia.html</code></li>
+</ul>
+<h2>Próximos Passos</h2>
+<ol>
+<li>Explore o site de exemplo em <code>example-site/</code></li>
+<li>Personalize os templates</li>
+<li>Adicione mais páginas</li>
+<li>Experimente diferentes configurações</li>
+</ol>
+
+        </div>
+    </main>
+    
+<footer>
+    <div class="container">
+        <p>&copy; 2024 SiteGen. Gerador de sites estáticos em Go.</p>
+        <p>Desenvolvido com ❤️ para a comunidade.</p>
+    </div>
+</footer>
+
+</body>
+</html> 

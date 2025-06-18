@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Template Page - SiteGen</title>
+    <meta name="description" content="SiteGen - Gerador de sites estáticos em Go">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    
+<header>
+    <nav class="container">
+        <a href="index.html" class="logo">SiteGen</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="blog/">Blog</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="container">
+        <div class="content">
+            <div class="page-header">
+                <h1>Teste de Template Page</h1>
+                
+                <div class="date">2024-01-20</div>
+                
+                
+                <div class="tags">
+                    
+                    <span class="tag">teste</span>
+                    
+                    <span class="tag">page</span>
+                    
+                    <span class="tag">template</span>
+                    
+                </div>
+                
+            </div>
+            <h1>Teste de Template Page</h1>
+<p>Esta página <strong>ESPECIFICA</strong> explicitamente o template <code>page</code> no frontmatter, então deve usar o template page.</p>
+<h2>Como Funciona</h2>
+<ol>
+<li><strong>Template no frontmatter</strong>: Esta página tem <code>template: &quot;page&quot;</code> no frontmatter</li>
+<li><strong>Prioridade alta</strong>: O sistema usa o template especificado</li>
+<li><strong>Resultado</strong>: Esta página usa o template <code>page.html</code></li>
+</ol>
+<h2>Verificação</h2>
+<p>Se você está vendo esta página com o layout de página (com cabeçalho de página, estrutura específica), significa que a prioridade do frontmatter está funcionando corretamente.</p>
+<h2>Estrutura do Frontmatter</h2>
+<pre><code class="language-yaml">---
+title: &quot;Teste de Template Page&quot;
+date: &quot;2024-01-20&quot;
+category: &quot;teste&quot;
+template: &quot;page&quot;  # ← Template específico
+tags: [&quot;teste&quot;, &quot;page&quot;, &quot;template&quot;]
+---
+</code></pre>
+<h2>Características do Template Page</h2>
+<p>Este template deve ter:</p>
+<ul>
+<li>Layout para páginas estáticas</li>
+<li>Cabeçalho de página</li>
+<li>Estrutura de conteúdo</li>
+<li>Navegação principal</li>
+</ul>
+<h2>Hierarquia de Prioridade</h2>
+<ol>
+<li><strong>Prioridade Alta</strong>: <code>template: &quot;page&quot;</code> no frontmatter</li>
+<li><strong>Prioridade Baixa</strong>: Template padrão do TOML (fallback)</li>
+</ol>
+<h2>Teste Completo</h2>
+<p>Agora você pode comparar:</p>
+<ul>
+<li><strong>teste-layout.md</strong>: Sem template → usa fallback</li>
+<li><strong>teste-blog.md</strong>: <code>template: &quot;blog&quot;</code> → usa blog</li>
+<li><strong>teste-page.md</strong>: <code>template: &quot;page&quot;</code> → usa page</li>
+</ul>
+<p>Todos os três cenários devem funcionar corretamente!</p>
+
+        </div>
+    </main>
+    
+<footer>
+    <div class="container">
+        <p>&copy; 2024 SiteGen. Gerador de sites estáticos em Go.</p>
+        <p>Desenvolvido com ❤️ para a comunidade.</p>
+    </div>
+</footer>
+
+</body>
+</html> 
