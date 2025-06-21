@@ -457,4 +457,38 @@ body {
     margin-bottom: var(--space-3xl);
     padding-bottom: var(--space-2xl);
     border-bottom: 1px solid #f1f5f9;
+}
+
+/* Header centralizado minimalista */
+.header-centered {
+    background: none;
+    text-align: center;
+    border-bottom: none;
+    padding: var(--space-3xl) 0 var(--space-2xl);
+}
+
+.site-logo {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: var(--space-sm);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+.site-logo:hover {
+    transform: scale(1.1) rotate(-8deg);
+}
+
+.site-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+    line-height: var(--line-height-tight);
+}
+
+.site-description {
+    font-size: var(--font-size-large);
+    color: var(--color-text-light);
+    font-weight: 300;
+    margin-bottom: 0;
 } 
