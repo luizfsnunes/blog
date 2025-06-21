@@ -468,14 +468,24 @@ body {
 }
 
 .site-logo {
-    font-size: 2.5rem;
     display: inline-block;
     margin-bottom: var(--space-sm);
     text-decoration: none;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
 }
+
+.site-logo img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s ease;
+}
+
 .site-logo:hover {
-    transform: scale(1.1) rotate(-8deg);
+    transform: scale(1.05);
+}
+
+.site-logo:hover img {
+    filter: brightness(1.1);
 }
 
 .site-title {
