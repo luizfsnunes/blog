@@ -78,12 +78,13 @@ body {
     background: none !important;
 }
 
-/* Header */
+/* Header minimalista */
 .header {
-    padding: var(--space-3xl) 0 var(--space-2xl);
-    border-bottom: 1px solid var(--color-border);
-    margin-bottom: var(--space-3xl);
-    background-color: transparent;
+    padding: var(--space-xl) 0 var(--space-lg);
+    border: none;
+    margin-bottom: var(--space-xl);
+    background: none;
+    box-shadow: none;
 }
 
 .header-centered {
@@ -91,17 +92,15 @@ body {
 }
 
 .site-logo {
-    display: inline-block;
-    margin-bottom: var(--space-md);
-    transition: all var(--transition-normal);
-    border-radius: 8px;
-    padding: var(--space-xs);
+    margin-bottom: var(--space-sm);
+    border-radius: 6px;
+    padding: 0;
+    box-shadow: none;
 }
 
 .site-logo img {
-    width: 40px;
-    height: 40px;
-    transition: all var(--transition-normal);
+    width: 32px;
+    height: 32px;
 }
 
 .site-logo:hover {
@@ -120,13 +119,11 @@ body {
 }
 
 .site-title {
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
     color: var(--color-primary);
-    margin-bottom: var(--space-md);
-    line-height: var(--line-height-tight);
-    letter-spacing: -0.02em;
-    transition: color var(--transition-normal);
+    letter-spacing: -0.01em;
 }
 
 .site-title a {
@@ -143,12 +140,11 @@ body {
 }
 
 .site-description {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-large);
     color: var(--color-text-light);
     font-weight: 400;
-    line-height: 1.5;
-    max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto var(--space-md) auto;
+    max-width: 400px;
 }
 
 /* Main content */
@@ -160,14 +156,13 @@ body {
 .posts {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4xl);
+    gap: var(--space-3xl);
 }
 
 .post-preview {
-    padding: 2rem var(--space-3xl);
+    padding: var(--space-xl) 0;
     border-bottom: 1px solid var(--color-border);
     transition: all var(--transition-normal);
-    border-radius: 8px;
     background-color: transparent;
     border: none;
 }
@@ -177,9 +172,9 @@ body {
 }
 
 .post-preview:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    background-color: var(--color-surface);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+    background-color: transparent;
 }
 
 .post-meta {
@@ -196,30 +191,26 @@ body {
 }
 
 .post-category {
-    background-color: var(--color-accent);
-    color: white;
+    background-color: transparent;
+    color: var(--color-accent);
     padding: var(--space-xs) var(--space-sm);
-    border-radius: 6px;
+    border-radius: 4px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-size: 12px;
-    position: relative;
-    padding-left: calc(var(--space-sm) + 8px);
+    font-size: 11px;
+    border: 1px solid var(--color-accent);
     transition: all var(--transition-fast);
 }
 
 .post-category::before {
-    content: "•";
-    position: absolute;
-    left: var(--space-sm);
-    color: white;
-    font-weight: bold;
+    content: "";
 }
 
 .post-category:hover {
-    background-color: var(--color-accent-hover);
-    transform: scale(1.05);
+    background-color: var(--color-accent);
+    color: white;
+    transform: scale(1.02);
 }
 
 .post-category:focus {
@@ -295,13 +286,13 @@ body {
 .post {
     max-width: 100%;
     background-color: transparent;
-    padding: 2rem var(--space-3xl);
-    border-radius: 12px;
+    padding: var(--space-xl) 0;
+    border-radius: 0;
     border: none;
 }
 
 .post-header {
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-2xl);
     text-align: center;
 }
 
@@ -417,12 +408,12 @@ body {
 
 /* Navegação entre posts */
 .post-navigation {
-    margin-top: var(--space-2xl);
-    padding-top: var(--space-xl);
-    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
     background-color: transparent;
-    padding: var(--space-xl);
-    border-radius: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
     border: none;
 }
 
@@ -631,18 +622,19 @@ body {
     font-weight: 400;
 }
 
+/* Footer minimalista */
 .footer {
-    margin-top: var(--space-4xl);
-    padding: var(--space-3xl) 0;
-    border-top: 1px solid var(--color-border);
-    text-align: center;
+    padding: var(--space-lg) 0 var(--space-md);
+    border: none;
+    background: none;
+    box-shadow: none;
     color: var(--color-text-light);
-    background-color: transparent;
+    text-align: center;
+    font-size: var(--font-size-small);
 }
 
 .footer-stats {
-    font-size: var(--font-size-small);
-    margin-bottom: var(--space-md);
+    display: none;
 }
 
 .pagination {
