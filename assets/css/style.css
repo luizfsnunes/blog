@@ -287,6 +287,48 @@ body {
     text-decoration: underline;
 }
 
+/* Tags */
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-left: var(--space-md);
+}
+
+.post-tag {
+    background-color: #f0f9ff;
+    color: #0369a1;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.3px;
+    border: 1px solid #bae6fd;
+    transition: all 0.2s ease;
+}
+
+.post-tag:hover {
+    background-color: #e0f2fe;
+    border-color: #7dd3fc;
+    transform: translateY(-1px);
+}
+
+/* Post navigation */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.reading-time {
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
+    font-weight: 400;
+}
+
 /* Footer */
 .footer {
     margin-top: var(--space-3xl);
@@ -295,6 +337,26 @@ body {
     text-align: center;
     color: var(--color-text-light);
     font-size: var(--font-size-small);
+}
+
+.footer-stats {
+    margin-top: var(--space-sm);
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.post-count {
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
+    font-weight: 400;
 }
 
 /* Responsividade */
@@ -323,6 +385,11 @@ body {
     .post-excerpt {
         font-size: var(--font-size-base);
     }
+    
+    .post-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 480px) {
@@ -341,6 +408,15 @@ body {
     .post-content ul,
     .post-content ol {
         padding-left: var(--space-lg);
+    }
+    
+    .post-tags {
+        gap: var(--space-xs);
+    }
+    
+    .post-tag {
+        font-size: 11px;
+        padding: calc(var(--space-xs) - 1px) calc(var(--space-sm) - 2px);
     }
 }
 
@@ -363,6 +439,17 @@ body {
         --color-primary: #f7fafc;
         --color-secondary: #e2e8f0;
         --color-border: #4a5568;
+    }
+    
+    .post-tag {
+        background-color: #1e3a8a;
+        color: #93c5fd;
+        border-color: #3b82f6;
+    }
+    
+    .post-tag:hover {
+        background-color: #1e40af;
+        border-color: #60a5fa;
     }
 }
 
