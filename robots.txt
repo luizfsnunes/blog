@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /draft/
+Allow: /
+
+Sitemap: https://luizfsnunes.github.io/blog/sitemap.xml
