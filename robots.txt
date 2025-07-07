@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /private/
 Allow: /
 
-Sitemap: https://blog.nilpointer.com.br/sitemap.xml
+Sitemap: http://blog.nilpointer.com.br/sitemap.xml
